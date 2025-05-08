@@ -4,18 +4,18 @@ const app = express();
 
 app.use(express.json());
 
-import bodyParser  from 'body-parser';
-app.use(bodyParser.urlencoded({ extended: true }));
+//import bodyParser  from 'body-parser';
+//app.use(bodyParser.urlencoded({ extended: true }));
 
-import { router } from './routes';
+import { router } from './routes/index.js';
 app.use(router);
 
-import nunjucks from 'nunjucks'
-nunjucks.configure('views', { express: app } );
-app.set('view engine', 'njk');
+//import nunjucks from 'nunjucks'
+//nunjucks.configure('views', { express: app } );
+//app.set('view engine', 'njk');
 
-const path = require('path');
-app.use(express.static(path.join(__dirname, 'public')));
+//const path = require('path');
+//app.use(express.static(path.join(__dirname, 'public')));
 
 app.listen(3000, (erro) => {
     if (erro) {

@@ -3,11 +3,12 @@ import { Router}  from'express'
 const router = Router()
 
 router.get('/', (req, res) => {
-    res.render('index', {titulo: 'Home'});
+    res.send('<h1>Ola mundo</h1>');
+    //res.render('index', {titulo: 'Home'});
 });
 
 router.put('/foto', (req, res) => {
     res.redirect('/');
 });
 
-module.exports = { router };
+export { router };
