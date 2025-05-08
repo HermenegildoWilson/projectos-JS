@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resultado</title>
+</head>
+<body>
+    <script>
+        // Obter os parâmetros da URL
+        const params = new URLSearchParams(window.location.search);
+        const name = params.get('name'); // Pega o valor do campo 'name'
+
+        // Exibir na página
+        document.body.innerHTML = `<h1>Olá, ${name}!</h1>`;
+    </script>
+</body>
+</html>

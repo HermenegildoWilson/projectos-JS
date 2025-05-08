@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cliente</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-flow: column;
+            gap: 10px;
+
+            padding: 20px;
+            background-color: #d3d3d370;
+        }
+        div {
+            border: 1px solid black;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    <p>URL: <input type="text"></p>
+    <button>Requisitar</button>
+    <div></div>
+
+    <script>
+        const url = document.querySelector('input');
+        const botao = document.querySelector('button');
+        const output = document.querySelector('div');
+
+        function request(url) {
+            const xhr = new XMLHttpRequest();
+
+            xhr.open('GET', url, true);
+
+            xhr.onload = () => {
+                output.innerHTML = xhr.responseText;
+            }
+
+            xhr.onerror = () => {
+                output.innerText = 'Erro';
+            }
+
+            xhr.send();
+        }
+
+        botao.onclick = () => {
+            request(url.value);
+        }
+
+    </script>
+</body>
+</html>

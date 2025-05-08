@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CANVAS</title>
+    <style>
+        canvas {
+            border: 1px solid black;
+        }
+    </style>
+</head>
+
+<body>
+
+    <canvas id="cv1"></canvas>
+    <p></p>
+    <canvas id="cv2"></canvas>
+
+    <script>
+        let canvasObject = document.querySelector('canvas').getContext('2d');
+        let img = document.createElement('img');
+
+        img.src = '../personagem.jpg';
+
+        let imgWidth = 73, imgHeight = 110;
+        img.addEventListener('load', () => {
+            let cont = 0
+            setInterval(function () {
+                canvasObject.drawImage(img, cont * imgWidth, 0, imgWidth, imgHeight, 80, 20, imgWidth, imgHeight);
+
+                cont = (cont + 1) % 8
+            }, 150)
+
+            var cx = document.querySelector("#cv2").getContext("2d");
+            cx.scale(.9, .9);
+            cx.beginPath();
+            cx.arc(50, 50, 40, 0, 7);
+            cx.lineWidth = 3;
+            cx.stroke();
+
+        })
+    </script>
+
+</body>
+
+</html>

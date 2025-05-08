@@ -1,0 +1,5 @@
+Este é um arquivo de exemplo.
+Aprendendo manipulação de arquivos com Node.js.
+Excrito por: Hermenegildo
+
+Leia um arquivo, adicione um conteúdo e salve o resultado em um novo arquivo.

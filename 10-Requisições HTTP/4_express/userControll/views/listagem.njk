@@ -1,0 +1,46 @@
+
+{% extends "index.njk" %}
+{% block conteudoMain %}
+    <div id="tabela">
+        <table>
+            <thead>
+                <tr>
+                    <th colspan="7">Lista dos usuarios cadastrados</th>
+                </tr>
+                <tr>
+                    <th>Id</th>
+                    <th>Nome</th>
+                    <th>Sexo</th>
+                    <th>Data de nascimento</th>
+                    <th>Data de cadastro</th>
+                    <th colspan="2">Ações</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for user in users %}
+                    <tr>
+                        {% for chave, dado in user%}
+                            
+                            {% if user.nascimento == dado %}
+                                <td>{{ dado.toDateString() }}</td>
+                            {% else %}
+
+                                {% if user.dataCadastro == dado %}
+                                    <td>{{ dado.toDateString() }}</td>
+                                {% else %}
+                                    <td>{{dado}}</td>
+                                {% endif %}
+                            
+                            {% endif %}
+
+                        {% endfor %}
+                        
+                        <td id="editar"> <button style="background:rgba(132, 236, 231, 0.14);"><a href="http://localhost:3000/user/update/{{ user.id }}">Editar</a></button> </td>
+
+                        <td id="excluir"> <button style="background:rgba(236, 144, 132, 0.14);"><a href="http://localhost:3000/user/delete/{{ uuser.id }}">Deletar</a></button> </td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+{% endblock %}

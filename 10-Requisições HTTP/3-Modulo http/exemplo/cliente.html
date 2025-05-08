@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cliente</title>
+</head>
+<body>
+    <button>Requisitar</button>
+    <div></div>
+    <script>
+        const output = document.querySelector('div');
+        
+        function requisitar(url) {
+            return new Promise(function(sucesso, erro){
+                const xhr = new XMLHttpRequest();
+                
+                xhr.open('GET', url, true);
+
+                xhr.onload = () => {
+                    if (xhr.status < 400) {
+                        sucesso(xhr.responseText);
+                    }else {
+                        erro(new Error('Erro ', xhr.status));
+                    }
+                }
+
+                xhr.onerror = () => {
+                    erro(new Error('Erro de requisição!'));
+                }
+                
+                xhr.send();
+            })
+        }
+
+        document.querySelector('button').onclick = () => {
+            window.alert()
+            requisitar('http://localhost:8000/pequisar.txt').then((texto) => {
+                output.innerHTML = 'Resultado: ',texto;
+            }).catch((texto) => {
+                output.innerHTML = texto;
+            });
+        }
+    </script>
+</body>
+</html>

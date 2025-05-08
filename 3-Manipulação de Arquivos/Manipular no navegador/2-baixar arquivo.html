@@ -1,0 +1,18 @@
+<input type="file" id="fileInput" />
+<div id="output"></div>
+
+<script>
+  const fileInput = document.getElementById('fileInput');
+  const output = document.getElementById('output');
+
+  fileInput.addEventListener('change', (event) => {
+    const file = event.target.files[0]; // Obtem o arquivo selecionado
+    if (!file) return;
+
+    const reader = new FileReader();
+    reader.onload = (e) => {
+      output.textContent = e.target.result; // Exibe o conteúdo do arquivo
+    };
+    reader.readAsText(file); // Lê o arquivo como texto
+  });
+</script>

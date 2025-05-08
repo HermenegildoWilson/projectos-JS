@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Requisição</title>
+</head>
+<body>
+    <h1>Seja bem-vindo!</h1>
+    <input type="file" name="foto" id="foto">
+    <button>Guardar</button>
+    
+
+    <script>
+        const button = document.querySelector('button');
+
+        button.addEventListener('click',() => {
+            const url = 'http://localhost:3000/users';
+
+            async function obterDados() {
+                try {
+                    const resposta = await fetch(url, {method: 'GET'});
+
+                    const dados = await resposta.json();
+                    return dados;
+                } catch (erro) {
+                    return 'Erro '+erro;
+                }
+            }
+            
+            const output = document.querySelector('div');
+            obterDados().then(dados => {
+                console.log(dados);
+            });
+        });
+    </script>
+</body>
+</html>

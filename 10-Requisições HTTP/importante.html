@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <title>Formulário</title>
+</head>
+<body>
+    <h2>Criar Usuário</h2>
+    <form id="usuarioForm">
+        <input type="text" name="nome" placeholder="Nome" required><br>
+        <input type="email" name="email" placeholder="Email" required><br>
+        <input type="number" name="idade" placeholder="Idade" required><br>
+        <button type="submit">Enviar</button>
+    </form>
+
+    <script>
+        document.getElementById('usuarioForm').addEventListener('submit', async function(event) {
+            event.preventDefault();
+
+            const formData = new FormData(this);
+            const data = Object.fromEntries(formData.entries());
+
+            await fetch('http://localhost:3000/usuarios', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify(data)
+            });
+
+            alert('Usuário criado!');
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CANVAS</title>
+    <style>
+        canvas {
+            border: 1px solid black;
+        }
+    </style>
+</head>
+
+<body>
+
+    <canvas id="cv1" width="200" height="120"></canvas>
+    <p></p>
+    <canvas id="cv2"></canvas>
+    <p></p>
+    <canvas id="cv3"></canvas>
+    <p></p>
+    <canvas id="cv4"></canvas>
+    <p></p>
+    <canvas id="cv5"></canvas>
+
+    <script>
+        let canvas = document.querySelector("#cv1");
+        let context = canvas.getContext("2d");
+        context.fillStyle = "red";
+        //Posicionando o elemento criado na tela: (x, y, width, heigth)
+        context.fillRect(50, 30, 100, 50);
+
+        //------------------------------------------------------------
+        let cx = document.querySelector("#cv2").getContext("2d");
+        cx.strokeStyle = "blue";
+
+        cx.strokeRect(5, 5, 50, 50);
+
+        cx.lineWidth = 5;
+        cx.strokeRect(135, 5, 50, 50);
+
+        cx.fillRect(200, 5, 20, 20);
+
+        //------------------------------------------------------------
+        cx = document.querySelector("#cv3").getContext("2d");
+        cx.beginPath();
+
+        cx.moveTo(10, 10);
+        cx.lineTo(290, 152);
+        cx.lineTo(290, 10);
+        cx.lineTo(10, 10);
+        cx.lineTo(10, 152);
+
+        cx.font = ' 20px arial';
+        cx.strokeText('Ola', 0,20);
+        cx.textAlign = 'end';
+        
+        
+        cx.stroke();
+        //------------------------------------------------------------
+        cx = document.querySelector("#cv4").getContext("2d");
+        cx.beginPath();
+        cx.moveTo(0, 0);
+        cx.quadraticCurveTo(100, 80, 20, 130);
+        //cx.bezierCurveTo(30, 3, 30, 3, 35, 40);
+        cx.lineTo(302, 150);
+
+        cx.stroke();
+
+        //------------------------------------------------------------
+        let arco = document.querySelector("#cv5").getContext("2d");
+        arco.beginPath();
+        // center=(50,50) radius=40 angle=0 to 7
+        arco.arc(60, 60, 60, 0, 6);        
+        
+        
+        arco.fillStyle = 'lightblue';
+        
+        arco.fill();
+    </script>
+
+</body>
+
+</html>

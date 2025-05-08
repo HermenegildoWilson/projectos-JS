@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Table</title>
+</head>
+<body>
+    <fieldset>
+        <h1>Gerador de tabela</h1>
+        
+        <button style="padding: 10px;" id="botao">Adicionar</button>
+        <div class="resultado"></div>
+        <input type="text">
+    </fieldset>
+
+    <script>
+        let resultado = document.querySelector('.resultado')
+        const btnAdicionar = document.querySelector('#botao')
+        
+        /*
+        btnAdiciona.ondraggstart = (evento) => {
+            resultado.textContent += String.fromCharCode(evento.charCode)
+        }*/
+        btnAdicionar.onclick = (evento) => {
+            resultado.textContent = evento.pageY
+            
+            window.alert(localStorage.getItem('nome'))
+        }
+        
+
+    </script>
+</body>
+
+</html>

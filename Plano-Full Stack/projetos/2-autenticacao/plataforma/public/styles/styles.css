@@ -1,0 +1,176 @@
+* {
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+    
+    color: #1c0051;
+    text-decoration: none;
+    list-style: none;
+}
+
+
+body{
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu;
+
+    background: #f2fafc;
+    min-height: 100vh;
+    
+    display: flex;
+    flex-flow: column;
+    justify-content: space-between;
+}
+header , footer {
+    min-height: 14vh;
+    background: #eaf1f7;
+    padding: 18px;
+
+    display: flex;
+    gap: 12px;
+    flex-flow: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+header > a { padding: 0; }
+
+nav { 
+    flex: auto;
+
+    display: flex;
+    flex-flow: wrap;
+    justify-content: flex-end;
+    gap: 8px;
+}
+
+h1 {
+    font-size: 1.6em;
+}
+
+
+main {
+    flex: auto;
+
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+}
+.landingPage  {
+    align-items: flex-start;
+    margin-left: 40px;
+    gap: 40px;
+}
+.landingPage h2 {
+    font-size: 2.2em;
+    margin-bottom: 20px;
+}
+.landingPage p {
+    font-size: 1.2em;
+    margin: 0 25px;
+}
+.landingPage button {
+    margin-left: 60px;
+}
+
+
+.listaCursos {
+    margin-top: 30px;
+    justify-content: unset;
+    align-items: unset;
+}
+.listaCursos h2 {
+    width: 100%;
+    text-align: left;
+
+    font-size: 2.2em;
+    margin-bottom: 20px;
+    padding-left: 40px;
+}
+.cursos {
+    padding: 25px 40px;
+    display: grid;
+    gap: 18px;
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+}
+.curso {
+    border: 1px solid black;
+    border-radius: 10px;
+    overflow: hidden;
+}
+.curso .foto {
+    text-align: center;
+}
+img { width: 100%; }
+video { width: 100%;
+        height: 100%; }
+.curso p {
+    padding-right: 8px;
+    margin-left: 15px;
+}
+.botaoAssistir {
+    margin-left: 18px;
+}
+
+footer {justify-content: center;}
+footer p { text-align: center; }
+
+
+a:not(div.foto a) {
+    font-weight: 600;
+    font-size: 1em;
+    padding: 8px;
+    display: inline-block;
+}
+
+button[type="submit"] {
+    background: #acff2f25;
+    align-self: center;
+    padding: 8px;
+}
+button {
+    background: #2fceff17;
+    border: .1px solid #80808042;
+    margin: 8px 0;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.alerta code {
+    color: #ff00008a;
+}
+
+
+
+thead {
+    text-align: center;
+}
+table, thead, tbody, td, th {
+    border: 1px solid black;
+    border-collapse: collapse;
+    padding: 8px;  
+}
+
+
+form {
+    background: #eaf1f7ad;
+    min-width: 50vw;
+    border-radius: 10px;
+    padding: 15px;
+
+    display: flex;
+    flex-flow: column;
+    gap: 6px;
+}
+.campo {
+    flex: auto;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+}
+input, select {
+    flex: auto;
+    padding: 6px;
+    border-radius: 6px;
+    border: .1px solid #80808042;
+}

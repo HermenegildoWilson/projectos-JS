@@ -1,0 +1,32 @@
+{% extends "index.njk" %}
+
+{% block conteudoMain %}
+
+    <h2>Atualisação de cadastro</h2>
+    <form action="/user/update/{{id}}" method="post">
+        <p class="campo">
+            <label for="nome">Nome: </label>
+            <input type="text" name="nome" id="nome">
+        </p>
+        <p class="campo">
+            <label>Sexo: </label><br>
+            
+            <span>
+                <label for="sexoM">Masculino </label>
+                <input type="radio" name="sexo" id="sexoM" value="M">
+
+                <label for="sexoF">Feminino </label>
+                <input type="radio" name="sexo" id="sexoF" value="F">
+            </span>
+        </p>
+        <p class="campo">
+            <label for="nascimento">Nascimento: </label>
+            <input type="date" name="nascimento" id="nascimento">
+        </p>
+        <p class="campoBotoes">
+            <button type="submit">Atualisar</button>
+            <button style="background:rgba(132, 236, 231, 0.30);"><a href="http://localhost:3000/users">Voltar</a></button>
+        </p>
+    </form>
+
+{% endblock %}

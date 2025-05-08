@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="pt-pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Campo file</title>
+</head>
+<body>
+    <form>
+        <input type="file" name="arquivo" id="arquivo">
+    </form>
+    <div></div>
+
+    <script>
+        const output = document.querySelector('div')
+
+        const input = document.querySelector('input')
+
+        input.onchange = () => {
+            
+            output .innerHTML = input.files[0].nam
+        }
+    </script>
+</body>
+</html>

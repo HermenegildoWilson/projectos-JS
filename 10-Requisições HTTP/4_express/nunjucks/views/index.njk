@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ titulo }}</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    {% import "macros.njk" as macros %}
+    <header>
+        <h1>Seja-bem vindo!</h1>
+        {{ macros.link('http://localhost:3000/info', 'Info') }}
+    </header>
+    <main>
+        {% block conteudo %}
+        <div>
+            <h2>Syte de pesquisa</h2>
+            <p>{{ 'wilson' | editar }}</p>
+        </div>
+        {% endblock%}
+    </main>
+    <footer>
+        <p>&copy; Hermenegildo Panzo</p>
+    </footer>
+</body>
+</html>

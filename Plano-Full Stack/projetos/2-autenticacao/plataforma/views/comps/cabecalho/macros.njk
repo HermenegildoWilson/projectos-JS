@@ -1,0 +1,7 @@
+{% macro criarMenu(opcoes) %}
+    <nav>
+        {% for item, link in opcoes %}
+            <a href={{ link }}>{{ item }}</a>
+        {% endfor %}
+    </nav>
+{% endmacro %}

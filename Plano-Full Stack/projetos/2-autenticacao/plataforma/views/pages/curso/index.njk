@@ -1,0 +1,21 @@
+{% extends "../../index.njk" %}
+
+{% block cabecalho %}
+    {% if session %}
+        {% include "../../comps/cabecalho/aluno.njk" %} 
+    {% else %}
+        {% include "../../comps/cabecalho/main.njk" %}
+    {% endif %}
+{% endblock %}
+
+{% block corpo %}
+    {% if tipo == 'lista' %}
+        
+        {% include "../../comps/corpo/cursos.njk" %} 
+    
+    {% else %}
+
+        {% include "../../comps/corpo/curso.njk" %}
+
+    {% endif %}
+{% endblock %}

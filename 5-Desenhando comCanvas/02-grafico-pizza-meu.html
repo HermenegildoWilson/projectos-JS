@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Piza</title>
+    <style>
+        canvas {
+            border: 1px solid black;
+        }
+    </style>
+</head>
+<body>
+    <canvas height="300" width="300"></canvas>
+
+    <script>
+        //Pegamos o bojecto canvas
+        let canvasObject = document.querySelector('canvas').getContext('2d');
+
+        //Dados a serem analisados
+        let dados = [163, 284, 102, 178, 10, 39];
+        let cores = ['lightblue', 'lightgreen', 'blue', 'pink', 'violet', 'silver']
+        //Cálculo do somatório dos dados
+        let total = dados.reduce((soma, numero) => {
+            return numero + soma;
+        })
+        
+        //Inicializamos o angulo inicial com o valor equivalenete a um quarto da circunferência negativo, para garantir que os angulos sejam dispostos a partir da posição inicial da circunferência, ou seja o topo, podemos inicializar com outro valor só fazemos isto por uma questão de estética
+        let anguloInicial = Math.PI * -0.5;
+        
+        //Percorremos os dados fornecidos para que possamos analisar cada posição/valor e calcular o percentual que ele ocupa na tela
+        dados.forEach((dado, indice) => {
+            //Calculamos o 'percentual' que cada dado ocupa com base o total, so que neste caso a percentagem máxima é PI*2.
+            let percentagem = (dado/total) * (Math.PI*2)
+
+            canvasObject.beginPath();
+
+            canvasObject.arc(150, 150, 100, anguloInicial, anguloInicial+percentagem);
+
+            canvasObject.fillText('Ola', 130, 50)
+            
+            //Incrementamos a posição de inicio pois da próxima vez temos de começar pelo ponto onde o angulo parou
+            anguloInicial = anguloInicial + percentagem;
+
+            //Editamos cada angulo para aparecer personalisado
+            canvasObject.fillStyle = cores[indice]
+            canvasObject.lineTo(150, 150);
+            canvasObject.fill();
+            canvasObject.closePath()
+            
+        })
+    </script>
+</body>
+</html>

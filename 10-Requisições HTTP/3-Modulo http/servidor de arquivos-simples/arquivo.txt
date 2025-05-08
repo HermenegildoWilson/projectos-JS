@@ -1,0 +1,53 @@
+pip, ambientes virtuais
+
+pip install django pillow
+curso de django: python full
+
+ataques web
+
+escalabilidade
+
+Forma de uso e funcionamento do metodo pipe(strems)
+		transform stream;
+
+	É possivel afirmar que respostas são streams de escrita e requisições de leitura?
+
+	método de requisição fetch, asincronia com async/await;
+
+Carboidrato, vegetal e proteinas
+
+iniciar um projecto API: npm init -y
+modulo: npm i express
+salvar automático: node --watch nomeDoArquivo.js
+Estenção: thunder client
+
+modulo mongo DB read: npm install prisma --save-dev
+	Depois dar um: npx prisma init
+
+any e all em python,
+
+	PLATAFORMAS DE CURSOS GRATUITOS
+https://digitalinnovation.one
+https://rocketseat.com.br
+https://workover.com.br
+
+	SYTE PARA SE INSPIRAR 'FORMULÁRIOS'
+https://codepen.io/freeCodeCamp/full/VPaoNP
+
+	SYTE PARA SE INSPIRAR EFEITO PARALAX
+https://jolly-kalam-23776e.netlify.app/parallaxsite/
+
+	SYTE PARA SE INSPIRAR LANDING PAGE
+https://jolly-kalam-23776e.netlify.app/cssgridresponsive/
+
+	SYTE PARA SE INSPIRAR PORTFÓLIO
+https://codepen.io/freeCodeCamp/full/zNBOYG
+
+	SYTE PARA SE INSPIRAR SLIDER
+https://www.youtube.com/watch?v=FZrHoAUkHpE
+
+	--> Quais as utilidades e qual a mais requerida pelas empresas que contratam desenvolvedores, das bibliotecas: React, Vue JS, Jquery;
+	--> Responsividade;
+	--> Esperiência de usuário e web design;
+	--> Performance e optimização de sytes (Light house, page speed);
+	--> UX, SEO, O que é;

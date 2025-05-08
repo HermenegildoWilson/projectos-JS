@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="pt-pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ titulo }}</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            text-decoration: none;
+        }
+        body{
+            background: #d3d3d370;
+
+            min-height: 100vh;
+            display: flex;
+            flex-flow: column;
+            justify-content: space-between;
+        }
+        header , footer {
+            min-height: 10vh;
+            background-color: #80808050;
+            padding: 10px 30px;
+
+            display: flex;
+            gap: 10px;
+            flex-flow: wrap;
+            align-items: center;
+            justify-content: flex-end;
+        }
+        div { 
+            flex: auto;
+            text-align: left;
+        }
+        nav { 
+            display: flex;
+            flex-flow: wrap;
+            justify-content: flex-end;
+            gap: 8px;
+        }
+        nav a { 
+            padding: 10px;
+            border-radius: 8px;
+            background: #80808088;
+        }
+        a {
+            color: #1d1d1d;
+            font-weight: 600;
+            font-size: 1em;
+        }
+        footer {justify-content: center;}
+        footer p { text-align: center; }
+
+        main {
+            display: flex;
+            flex-flow: column;
+            align-items: center;
+            justify-content: center;
+
+            padding: 10px;
+        }
+
+        form {
+            padding: 15px;
+            border-radius: 10px;
+            background: #d3d3d3e1;
+            min-width: 40vw;
+
+            display: flex;
+            flex-flow: column;
+            gap: 10px;
+        }
+
+        .campo {
+            flex: auto;
+
+            display: flex;
+            flex-flow: column;
+        }
+        .campo label { padding-left: 20px; }
+        .campo input {
+            border-radius: 6px;
+            padding: 6px;
+            border: none;
+            outline: none;
+        }
+        .campo button {
+            width: 100px;
+        }
+        button { 
+            border-radius: 6px;
+            padding: 8px;
+            border: 1px solid rgba(156, 148, 148, 0.35);
+            outline: none;
+            margin: 0 4px;
+            cursor: pointer;
+        }
+        .campoBotoes {
+            text-align: center;
+            padding: 8px;
+        }
+        thead {
+            text-align: center;
+        }
+        table, thead, tbody, td, th {
+            border: 1px solid black;
+            border-collapse: collapse;
+            padding: 8px;   
+        }
+        
+        #tabela {
+            overflow-x: auto;
+        }
+
+        #excluir, #editar {
+            padding: 0px;
+        }
+        #excluir button, #editar button { 
+            border-radius: 0px; 
+            margin: 0px; 
+        }
+    </style>
+    <!--
+        <link rel="stylesheet" src="../public/styles.css">
+    -->
+
+</head>
+<body>
+    <header>
+        <div><h1>UserCrontroll</h1></div>
+        <nav>
+            <a href="http://localhost:3000">Home</a>
+            <a href="http://localhost:3000/users">Listar usuarios</a>
+            <a href="http://localhost:3000/user/add">Cadastrar</a>
+        </nav>
+    </header>
+
+    <main>
+        {% block conteudoMain %}
+            <h2>Seja-bem vindo!</h1>
+        {% endblock %}
+    </main>
+
+    <footer>
+        <p>
+            &copy; Todos os direitosreservados a 
+            <a href="https://github.com/hermenegildowilson" target="_blank">Hermenegildo Wilson...</a>
+        </p>
+    </footer>
+</body>
+</html>

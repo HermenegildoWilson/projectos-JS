@@ -1,0 +1,19 @@
+[larry]
+searchengine=http://www.google.com/search?q=$1
+spitefulness=9.7
+spitefulness=9.9
+Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio, quas? Animi, blanditiis alias minima qui repudiandae enim soluta quibusdam culpa asperiores consequatur quod ullam accusamus numquam dolorem nam nulla adipisci!
+
+; comments are preceded by a semicolon...
+; these are sections, concerning individual enemies
+[larry]
+fullname=Larry Doe
+type=kindergarten bully
+website=http://www.geocities.com/CapeCanaveral/11451
+Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio, quas? Animi, blanditiis alias minima qui repudiandae enim soluta quibusdam culpa asperiores consequatur quod ullam accusamus numquam dolorem nam nulla adipisci!
+
+[gargamel]
+fullname=Gargamel
+type=evil sorcerer
+outputdir=/home/marijn/enemies/gargamel
+Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio, quas? Animi, blanditiis alias minima qui repudiandae enim soluta quibusdam culpa asperiores consequatur quod ullam accusamus numquam dolorem nam nulla adipisci!

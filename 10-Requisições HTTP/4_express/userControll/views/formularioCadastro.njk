@@ -1,0 +1,31 @@
+{% extends "index.njk" %}
+
+{% block conteudoMain %}
+<h2>Inserçõ de cadastro</h2>
+<form action="/user/add" method="post">
+    <p class="campo">
+        <label for="nome">Nome: </label>
+        <input type="text" name="nome" id="nome" required>
+    </p>
+    <p class="campo">
+        <label>Sexo: </label><br>
+
+        <span>
+            <label for="sexoM">Masculino </label>
+         <input type="radio" name="Sexo" id="sexoM" value="M" required>
+
+            <label for="sexoF">Feminino </label>
+            <input type="radio" name="Sexo" id="sexoF" value="F" required>
+        </span>
+    </p>
+    <p class="campo">
+        <label for="nascimento">Nascimento: </label>
+        <input type="date" name="nascimento" id="nascimento" required>
+    </p>
+    <p class="campoBotoes">
+        <button type="submit">Cadastrar</button>
+        <button style="background:rgba(132, 236, 231, 0.30);"><a href="http://localhost:3000">Voltar</a></button>
+    </p>
+</form>
+
+{% endblock %}

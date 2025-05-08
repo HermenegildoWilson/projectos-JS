@@ -1,0 +1,15 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    background: lightblue;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+img {
+    max-width: 300px;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    padding: 5px;
+}

@@ -1,0 +1,67 @@
+{% extends "../index.njk" %}
+
+{% block corpo %}    
+    <form id="formularioCadastro">
+        <h2>Cadastro</h2>
+        
+        <p class="campo">
+            <label for="nome">Nome: </label>
+            <input type="text" name="nome" id="nome" required>
+        </p>
+        
+        <p class="campo">
+            <label for="email">Email: </label>
+            <input type="email" name="email" id="email" required>
+        </p>
+        
+        <p class="campo">
+            <label for="dataNascimento">Nascimento: </label>
+            <input type="date" name="dataNascimento" id="dataNascimento" required>
+        </p>
+        
+        <div>
+            <label>Sexo: </label>
+            <p class="campo">
+                <span>
+                    <label for="sexoM">Masculino</label>
+                    <input type="radio" name="sexo" id="sexoM" value="Masculino" required>
+                </span>
+                <span>
+                    <label for="sexoF">Feminino</label>
+                    <input type="radio" name="sexo" id="sexoF" value="Feminino" required>
+                </span>
+            </p>
+        </div>
+
+        <p class="campo">
+            <label for="nacionalidade">Nacionalidade: </label>
+            <select name="nacionalidade" id="nacionalidade">
+                <option disabled selected >Selecione ...</option>
+                <option value="Angola">Angola</option>
+                <option value="Brazil">Brazil</option>
+                <option value="EUA">EUA</option>
+                <option value="França">França</option>
+                <option value="Portugal">Portugal</option>
+            </select>
+        </p>
+
+        <p class="campo">
+            <label for="senha">Senha: </label>
+            <input type="password" name="senha" id="senha" required>
+        </p>
+        
+        <div class="caixaBotoes">
+            <button class="botaoVoltar" type="button">
+                <a href="/">Voltar</a>
+            </button>
+        
+            <button id="botaoCadastrar" type="submit">Cadastrar</button>
+        </div>
+
+        <p>
+            Já tem uma conta? <a href={{"login"}}>Login</a>
+        </p>
+    </form>
+
+    <script src="scripts/cadastro.js"></script>
+{% endblock %}

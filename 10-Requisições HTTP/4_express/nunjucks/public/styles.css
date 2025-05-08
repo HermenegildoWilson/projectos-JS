@@ -1,0 +1,27 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    background: #1d1d1d33;
+    display: flex;
+    flex-flow: column;
+    justify-content: space-between;
+}
+
+header,
+footer {
+    background: #1d1d1d33;
+    padding: 20px;
+    height: 14vh;
+    text-align: center;
+}
+
+main {
+    margin: 0 10px;
+    padding: 10px;
+    border: 1px solid black;
+}

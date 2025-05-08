@@ -1,0 +1,24 @@
+{% if aluno == 'true' %}
+<h2>Os seus cursos</h2>
+<div class="cursos">
+    {% for curso in cursos %}
+        <div class="curso">
+            <div class="foto">
+                <a href={{ "/curso?c="+curso.nome }}>
+                    <img src={{ "curso/posters/"+curso.nome+".png" }} alt="Foto">
+                </a>
+                <h3> {{ curso.nome }} </h3> 
+            </div>
+            <p> {{ curso.descricao }} </p>
+            
+            <button class="botaoAssistir">
+                <a href={{ "/curso?c="+curso.nome }}>Assistir</a>
+            </button>
+        </div>
+    {% endfor %}
+</div>
+
+{% else %}
+    <h2>Nenhum curso</h2>
+
+{% endif %}

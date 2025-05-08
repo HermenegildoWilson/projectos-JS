@@ -1,0 +1,30 @@
+{% extends "../index.njk" %}
+
+{% block corpo %}
+    <form id="formularioLogin">
+        <h1>Login</h1>
+            
+        <p class="campo">
+            <label for="email">Email: </label>
+            <input type="email" name="email" id="email" required>
+        </p>
+        
+        <p class="campo">
+            <label for="senha">Senha: </label>
+            <input type="password" name="senha" id="senha" required>
+        </p>
+        
+        <div class="caixaBotoes" type="button">
+            <button class="botaoVoltar">
+                <a href="/">Voltar</a>
+            </button>
+            <button id="botaoLogin" type="submit">Login</button>
+        </div>
+
+        <p>
+            Não tem uma conta? <a href={{"cadastro"}}>cadastrar</a>
+        </p>
+    </form>
+
+    <script src="scripts/login.js"></script>
+{% endblock %}

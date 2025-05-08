@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="pt-pt">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{titulo}}</title>
+    <style>
+        * {
+            padding: 0px;
+            margin: 0px;
+        }
+
+        body {
+            background: grey;
+            height: 100vh;
+            display: flex;
+            flex-flow: column wrap;
+            justify-content: space-between;
+        }
+
+        header {
+            height: 15vh;
+            padding: 15px;
+
+            display: flex;
+            flex-flow: wrap;
+            gap: 10px;
+            justify-content: space-evenly;
+            align-items: center;
+
+            background: lightgrey;
+        }
+        nav {
+            display: flex;
+            gap: 10px;
+            justify-content: flex-end;
+        }
+        nav a {
+            background: #8080806e;
+            border-radius: 6px;
+            padding: 6px;
+        }
+        h1 {text-align: center;}
+
+        footer {
+            height: 15vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            background: lightgrey;
+        }
+
+        section {
+            max-height: 70vh;
+            max-width: 70vw;
+            margin: auto;
+
+            display: flex;
+            gap: 15px;
+            flex-flow: column;
+            align-items: center;
+            justify-content: center;
+        }
+        div {
+            border: 1px solid black;
+            border-radius: 10px;
+            padding: 10px;
+            text-align: justify;
+        }
+    </style>
+
+</head>
+
+<body>
+    <header>
+        <h1>Bem-vindo {{nome}}!</h1>
+        <nav>
+            <a>Onpção1</a>
+            <a>Onpção2</a>
+            <a>Onpção3</a>
+            <a>Onpção4</a>
+        </nav>
+    </header>
+
+    <section>
+        {% block conteudo %}
+            
+        {% endblock %}
+    </section>
+
+    {% include "descricao.njk" %}
+    
+    <footer>
+        <p>Por: Hermenegildo Wilson dos Santos Panzo</p>
+    </footer>
+</body>
+</html>

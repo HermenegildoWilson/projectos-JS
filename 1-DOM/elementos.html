@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estudo do DOM</title>
+    <style>
+        *{
+            padding: 0px;
+            margin: 0px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Estudo do DOM</h1>
+        <nav>
+            <ul>
+                <li>Item 1</li>
+                <li>Item 2</li>
+                <li>Item 3</li>
+                <li>Item 4</li>
+                <li>Item 5</li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div class="itens">
+            <div class="item">
+                Item 1
+            </div>
+            <div class="item">
+                Item 2
+            </div>
+            <div class="item">
+                Item 3
+            </div>
+            <div class="item">
+                Item 4
+            </div>
+            <div class="item">
+                Item 5
+            </div>
+        </div>
+        </section>
+    </main>
+    
+    <fieldset></fieldset>
+    <div></div>
+
+    <script>
+        const resultado = document.querySelector('fieldset')
+        
+
+        document.querySelector('body').insertBefore(document.querySelector('header'), resultado)
+        
+        resultado.innerHTML = resultado.of
+
+        document.querySelector('body>div').innerHTML = document.createTextNode('Ola').nodeType
+    </script>
+</body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            background-color: #4b5563;
+            background-color: #f9fafb;
+            background-color: #e29d79;
+            background-color: #115e59;
+            background-image: linear-gradient(#f9fafb, #e29d79, #115e59, #4b5563);
+            height: 100vh;
+            display: flex;
+            flex-flow: column;
+            justify-content: center;
+            align-items: center;
+        }
+    </style>
+</head>
+
+<body>
+    <h1></h1>
+    <button>Trocar de usuário</button>
+    <script>
+        let btn = document.querySelector('button')
+        let h1 = document.querySelector('h1')        
+
+        if (!localStorage.getItem('nome')) {
+            changeUser()
+        } else {
+            h1.textContent = `Ola Bem-Vindo! ${localStorage.getItem('nome')}`
+        }
+
+        function changeUser() {
+            const Mname = prompt('Imforme o seu nome')
+            if (!Mname) {
+                changeUser()
+            } else {
+                localStorage.setItem('nome', Mname)
+                h1.textContent = `Ola Bem-Vindo! ${localStorage.getItem('nome')}`
+            }
+        }
+        btn.onclick = () => {
+            changeUser()
+        }
+    </script>
+</body>
+
+</html>

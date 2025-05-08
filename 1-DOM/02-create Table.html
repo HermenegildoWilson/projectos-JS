@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Table</title>
+    <style>
+        /* Define uma visualização mais limpa para tabelas */
+        table {
+            border: 1px solid black;
+            border-collapse: collapse;
+        }
+
+        td, th, tr, button {
+            border: 1px solid black;
+            padding: 10px;
+            text-align: center;
+        }
+        fieldset {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <fieldset>
+        <h1>Gerador de tabela</h1>
+        
+        <button id="botao">Adicionar</button>
+    </fieldset>
+
+    <script>
+        const btnAdicionar = document.querySelector('#botao')
+        btnAdicionar.onclick = () => {
+            let tabela = document.createElement('table')
+            let tr = document.createElement('tr')
+
+            for(let i=1; i <= 3; i++) {
+                let td = document.createElement('td')
+                td.textContent = `Item ${i}`
+                tr.appendChild(td)
+            }
+            tabela.appendChild(tr)
+            document.querySelector('fieldset').appendChild(tabela)
+        }
+    </script>
+</body>
+
+</html>

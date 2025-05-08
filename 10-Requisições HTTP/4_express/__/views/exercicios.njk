@@ -1,0 +1,23 @@
+{% extends "index.njk"%}
+
+{% block conteudo %}
+
+    {% if numero %}
+        <h2>Tabuada do número {{numero}}</h2>
+        <div>
+            {% if numero == 0 %}
+                <p> Todo numero multiplicado por zero resulta em 0 </p>
+            {% else %}
+                {% for num in range(0, 13) %}
+                    <p> {{numero}} x {{num}} = {{ numero*num }} </p>
+                {% endfor %}
+            {% endif %}
+        </div>
+    {% else %}
+        <h1>Soma entre os números {{numero1}} e {{numero2}}</h1>
+        <div>
+            <p> {{numero1}} + {{numero2}} = {{numero1 + numero2}}</p>
+        </div>
+    {% endif %}
+
+{% endblock %}

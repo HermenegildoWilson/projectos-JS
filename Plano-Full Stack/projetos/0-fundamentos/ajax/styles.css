@@ -1,0 +1,45 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    background: rgba(128, 128, 128, 0.404);
+    padding: 10px;
+
+    display: flex;
+    gap: 10px;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+}
+button {
+    border: none;
+    padding: 15px;
+    background: #0000ff60;
+    cursor: pointer;
+    border-radius: 10px;
+}
+
+.carregando {
+    border-radius: 50%;
+    
+    border-top: 2px solid #ff0000e0;
+    border-bottom: 2px solid #ff0000e0;
+
+    width: 25px;
+    height: 25px;
+
+    animation: carregar 2s infinite linear;
+}
+
+@keyframes carregar {
+    0% {
+        transform: rotate(0);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
