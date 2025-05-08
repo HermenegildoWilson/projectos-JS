@@ -1,2 +1,0 @@
-npm install babel --save
- 

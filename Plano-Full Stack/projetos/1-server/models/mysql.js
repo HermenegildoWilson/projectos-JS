@@ -1,4 +1,4 @@
-const { mysqlDB } = require('../config');
+import { mysqlDB } from '../config';
 
 class mysqlIterator {
     insert = async (tableName, values) => {
@@ -40,4 +40,4 @@ class mysqlIterator {
     }
 }
 
-module.exports = new mysqlIterator();
+export default new mysqlIterator();
